@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Pookie 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ---------------- NAV BAR ---------------- -->
+<nav class="navbar">
+  <h1>💖 Love 💖</h1>
+  <ul>
+    <li><a href="#memoryGame">Memory Game</a></li>
+    <li><a href="#loveQuiz">Love Quiz</a></li>
+    <li><a href="#secretLetter">Secret Letter</a></li>
+    <li><a href="#photoGallery">Photos</a></li>
+    <li><a href="#blindBox">Blind Box</a></li>
+    <li><a href="#hugKiss">Hug / Kiss</a></li>
+    <li><a href="#videoMessage">Video</a></li>
+    <li><a href="#editableLetter">Your Letter</a></li>
+  </ul>
+</nav>
+<!-- LOCK SCREEN -->
+<div id="lockScreen">
+  <div class="lock-box">
+    <h2>🔒 Enter Love PIN 💖</h2>
+    <p>Only you know this 😉</p>
+
+    <div id="pinDisplay"><span id="pinText"></span><span class="cursor">|</span></div>
+
+    <div class="keypad">
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <button class="key clear">C</button>
+      <button class="key">0</button>
+      <button class="key ok">OK</button>
+    </div>
+
+    <p id="pinMessage"></p>
+  </div>
+</div>
+
+<!-- ---------------- HOME PAGE ---------------- -->
+<header>
+  <h1>HELLO Thun Hsu 💕</h1>
+  <p>Welcome to your special surprise ✨</p>
+</header>
+<section id="home" class="home-page">
+  <div class="home-content">
+    <h1>💖 Welcome My Love 💖</h1>
+    <h2>The Reason Why I Love You</h2>
+    <div class="love-reason-box">
+  <div class="heart-float">💖</div>
+  
+   <section id="reasons">
+  <h2 class="reason-title">The Reason Why I Love You</h2>
+
+  <div class="reason-container">
+    <div class="reason-card">You feel like home even when the world feels heavy.</div>
+    <div class="reason-card">Being with you feels like choosing the same place again and again.</div>
+    <div class="reason-card">Your presence calms parts of me I never knew how to explain.</div>
+    <div class="reason-card">Life makes more sense when you are near.</div>
+    <div class="reason-card">You understand my silence better than my words.</div>
+
+    <div class="reason-card">My days feel softer when they begin with you in my thoughts.</div>
+    <div class="reason-card">Ordinary moments feel quietly beautiful with you.</div>
+    <div class="reason-card">My heart recognized you long before my mind did.</div>
+    <div class="reason-card">You stay, even when leaving would be easier.</div>
+    <div class="reason-card">You see me as I am and still choose me.</div>
+
+    <div class="reason-card">Being with you feels as natural as breathing.</div>
+    <div class="reason-card">Chaos feels gentler when you are around.</div>
+    <div class="reason-card">You make tomorrow feel worth believing in.</div>
+    <div class="reason-card">You listen, even when I don’t know how to speak.</div>
+    <div class="reason-card">My heart rests when it finds yours.</div>
+
+    <div class="reason-card">With you, I feel seen instead of judged.</div>
+    <div class="reason-card">Every version of you feels right to me.</div>
+    <div class="reason-card">Even your quiet moments feel beautiful.</div>
+    <div class="reason-card">Love feels safe when it is with you.</div>
+    <div class="reason-card">Time slows down when I’m with you.</div>
+
+    <div class="reason-card">You are my favorite place to be.</div>
+    <div class="reason-card">Your love is steady, not loud.</div>
+    <div class="reason-card">Your hand feels like it belongs in mine.</div>
+    <div class="reason-card">Being with you feels like coming home.</div>
+    <div class="reason-card">My heart chose you long before I understood why.</div>
+
+    <div class="reason-card">Your smile feels like a promise I believe in.</div>
+    <div class="reason-card">Your happiness matters more to me than my pride.</div>
+    <div class="reason-card">You bring light into places I didn’t know were dark.</div>
+    <div class="reason-card">You feel like a story I never want to finish.</div>
+    <div class="reason-card">You are gentle with my heart.</div>
+
+    <div class="reason-card">You make me want to be better, not perfect.</div>
+    <div class="reason-card">My past feels accepted and my future feels possible with you.</div>
+    <div class="reason-card">Even on difficult days, you feel like peace.</div>
+    <div class="reason-card">With you, I feel chosen.</div>
+    <div class="reason-card">The world feels kinder with you in it.</div>
+
+    <div class="reason-card">Loving you feels like truth.</div>
+    <div class="reason-card">You make me smile without trying.</div>
+    <div class="reason-card">You feel like forever, not just a moment.</div>
+    <div class="reason-card">You understand me in ways I can’t explain.</div>
+    <div class="reason-card">Your love feels like warmth on a cold day.</div>
+
+    <div class="reason-card">My heart feels braver with you.</div>
+    <div class="reason-card">Life feels fuller with you in it.</div>
+    <div class="reason-card">You are the calm after every storm.</div>
+    <div class="reason-card">You are my favorite thought.</div>
+    <div class="reason-card">Staying with you feels like the easiest choice I’ve ever made.</div>
+  </div>
+</section>
+</div>
+
+    <ul class="love-sentences" id="loveSentences"></ul>
+    <p class="home-instruction">Scroll down or use the menu to explore more 💕</p>
+  </div>
+</section>
+
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="img/love.   wave to earth.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn">▶ Play Music</button>
+
+<!-- Relationship Counter -->
+<section class="counter">
+  <h2>❤️ Days Together: <span id="daysCount">0</span></h2>
+</section>
+
+<!-- Memory Game -->
+<section class="memory-game">
+  <h2>💞 Memory Match Game 💞</h2>
+  <div class="game-board" id="gameBoard"></div>
+  <p id="gameMessage"></p>
+</section>
+
+<!-- Secret Love Letter -->
+<section class="secret-letter" id="secretLetter">
+  <h2>💌 Secret Love Letter 💌</h2>
+  <p id="letterText">
+    အမြဲတမ်းအချိန်တိုင်းချစ်တယ် သွန်းငယ်လေးမှသွန်းငယ်ပဲ အမြဲတမ်းတွေ့နေချင်တယ် ချစ်တယ်❤️
+  </p>
+</section>
+
+<!-- Photo Gallery -->
+<section class="photo-gallery" id="photoGallery">
+  <h2>📸 My Favorite Photos of You 💖</h2>
+  <div class="photos">
+    <div class="photo-card">
+      <img src="img/photo_2026-01-03_18-39-01.jpg" alt="photo1">
+      <div class="photo-text">Our first date HH </div>
+    </div>
+    <div class="photo-card">
+      <img src="img/photo_2026-01-06_15-50-17.jpg" alt="photo2">
+      <div class="photo-text">My heart chose Thun (Myanmar san thu) 💕</div>
+    </div>
+    <div class="photo-card">
+      <img src="img/photo_2026-01-06_16-11-15.jpg" alt="photo3">
+      <div class="photo-text">Forever beautiful kiss kiss mhwa mhwa 😍</div>
+    </div>
+  </div>
+</section>
+
+<!-- Fake Chat -->
+<section class="chat-box" id="chatBox">
+  <h2>💬 Our First Chat</h2>
+  <div class="chat-messages" id="chatMessages"></div>
+  <input type="text" id="chatInput" placeholder="Type something...">
+  <button id="chatSend">Send</button>
+</section>
+
+<!-- Blind Box Surprise -->
+<section class="blind-box" id="blindBox">
+  <h2>🎁 Blind Box Surprise</h2>
+  <button id="openBox">Open Box</button>
+  <p id="boxMessage"></p>
+</section>
+
+<!-- Love Quiz -->
+<section class="love-quiz" id="loveQuiz">
+  <h2>🧠 Love Quiz About You</h2>
+  <p id="quizQuestion">Question will appear here</p>
+  <input type="text" id="quizAnswer" placeholder="Your answer">
+  <button id="submitQuiz">Submit</button>
+  <p id="quizResult"></p>
+</section>
+
+
+
+<!-- Hug / Kiss Button -->
+<section class="hug-kiss" id="hugKiss">
+  <h2>🤗 Hug / Kiss Me</h2>
+  <button id="hugBtn">🤗 Hug</button>
+  <button id="kissBtn">💋 Kiss</button>
+  <div class="hug-kiss-box"></div>
+
+  <!-- image popup -->
+  <div class="affection-display">
+    <img id="hugImg" src="img/photo_2026-01-07_18-07-41.jpg" alt="hug">
+    <img id="kissImg" src="img/photo_2026-01-07_18-07-48.jpg" alt="kiss">
+  </div>
+</div>
+
+  <p id="hugKissMessage"></p>
+</section>
+
+<!-- Video Message -->
+<section class="video-message" id="videoMessage">
+  <h2>🎥 Video Message</h2>
+  <video id="loveVideo" width="320" controls>
+    <source src="img/video_2026-01-07_18-33-09.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- Editable Love Letter -->
+<section class="editable-letter">
+  <h2>✍️ Your Love Letter</h2>
+  <textarea id="editableLetter" placeholder="Write your message here..."></textarea>
+  <button id="saveLetter">Save</button>
+  <p id="savedMessage"></p>
+</section>
+
+<footer>
+  Made with ❤️ by [Min Htet Kyaw Zin]
+</footer>
+
+<div id="hearts"></div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

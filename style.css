@@ -1,0 +1,385 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+  text-align: center;
+}
+
+/* Header */
+header { padding: 30px; }
+header h1 { color: #ff2f6d; font-size: 2.5em; }
+header p { color: #ff6699; }
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #ff2f6d;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.2s;
+}
+button:hover { transform: scale(1.05); }
+
+/* Music Button */
+#musicBtn { margin-bottom: 20px; }
+
+/* Relationship Counter */
+.counter { font-size: 1.5em; margin: 20px; color: #ff3366; }
+
+/* Memory Game */
+.memory-game { background: #fff; padding: 30px; width: 330px; margin: 30px auto; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.2);}
+.game-board { display: grid; grid-template-columns: repeat(4,1fr); gap:12px; margin-top:20px; }
+.card { height: 70px; background: linear-gradient(135deg,#ff4d88,#ff85a2); border-radius:12px; font-size:30px; color:transparent; display:flex; justify-content:center; align-items:center; cursor:pointer; transition: transform 0.5s, background 0.4s; transform-style: preserve-3d;}
+.card:hover { transform: translateY(-5px) scale(1.05); }
+.card.flip { background:#fff0f5; color:#ff2f6d; transform: rotateY(180deg);}
+.card.matched { background:#ffb6c1; cursor: default; animation: bounce 0.6s ease;}
+@keyframes bounce { 0%{transform:scale(1);} 30%{transform:scale(1.2);} 60%{transform:scale(0.95);} 100%{transform:scale(1);} }
+#gameMessage { margin-top:15px; font-weight:bold; color:#ff2f6d; }
+.win { animation: glow 1s infinite alternate; }
+@keyframes glow { from{ text-shadow:0 0 5px #ff2f6d;} to{ text-shadow:0 0 20px #ff85a2;} }
+
+/* Secret Love Letter */
+.secret-letter { background:#fff; width:80%; max-width:600px; margin:30px auto; padding:30px; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2); filter: blur(8px); opacity:0; pointer-events:none; transition:0.6s; }
+.secret-letter.unlock { filter: blur(0); opacity:1; pointer-events:auto; }
+.secret-letter h2 { color:#ff2f6d; }
+#letterText { font-size:1.1em; color:#444; white-space: pre-line; }
+
+/* Photo Gallery */
+.photo-gallery { background:#fff; width:90%; max-width:700px; margin:40px auto; padding:30px; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2); filter: blur(10px); opacity:0; pointer-events:none; transition:0.8s ease; }
+.photo-gallery.unlock { filter: blur(0); opacity:1; pointer-events:auto; }
+.photos { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.photo-card { position:relative; width:180px; height:220px; border-radius:15px; overflow:hidden; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+.photo-card img { width:100%; height:100%; object-fit:cover; transition:0.5s; }
+.photo-card:hover img { transform:scale(1.1); }
+.photo-text { position:absolute; inset:0; background:rgba(255,47,109,0.75); color:#fff; display:flex; justify-content:center; align-items:center; text-align:center; opacity:0; transition:0.4s; padding:10px;}
+.photo-card:hover .photo-text { opacity:1; }
+
+/* Chat Box */
+.chat-box { background:#fff; width:80%; max-width:500px; margin:30px auto; padding:20px; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+.chat-messages { height:150px; overflow-y:auto; border:1px solid #ff2f6d; margin-bottom:10px; padding:10px; border-radius:12px;}
+#chatInput { width:70%; padding:8px; border-radius:10px; border:1px solid #ff2f6d;}
+#chatSend { padding:8px 12px; }
+
+/* Blind Box */
+.blind-box { background:#fff; width:300px; margin:30px auto; padding:20px; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+#boxMessage { margin-top:10px; color:#ff3366; font-weight:bold; }
+
+/* Love Quiz */
+.love-quiz { background:#fff; width:300px; margin:30px auto; padding:20px; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+#quizResult { margin-top:10px; color:#ff3366; font-weight:bold; }
+
+/* Hug / Kiss */
+.hug-kiss { background:#fff; width:300px; margin:30px auto; padding:20px; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+#hugKissMessage { margin-top:10px; color:#ff3366; font-weight:bold; }
+
+/* Video Message */
+.video-message { width:320px; margin:30px auto; }
+
+/* Editable Letter */
+.editable-letter { width:80%; max-width:500px; margin:30px auto; padding:20px; background:#fff; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+#editableLetter { width:100%; height:100px; border-radius:12px; padding:10px; border:1px solid #ff2f6d;}
+#savedMessage { color:#ff3366; font-weight:bold; margin-top:10px; }
+
+/* Floating hearts */
+.heart { position: fixed; bottom:0; font-size:22px; animation: floatUp 3s linear forwards;}
+@keyframes floatUp { 0%{ transform:translateY(0); opacity:1;} 100%{ transform:translateY(-100vh); opacity:0; } }
+
+/* Footer */
+footer { margin:20px; color:#ff2f6d;}
+/* LOCK SCREEN FULL UPGRADE */
+#lockScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff9abf, #ffd6e8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Floating hearts background */
+#lockScreen::before {
+  content: "💖 💕 💗 💞 💝";
+  position: absolute;
+  font-size: 24px;
+  animation: floatHearts 8s linear infinite;
+  color: #ff2f6d;
+}
+@keyframes floatHearts {
+  0% { transform: translateY(100vh) rotate(0deg); opacity:0; }
+  20% { opacity:1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity:0; }
+}
+
+/* Lock Box */
+.lock-box {
+  background: #fff;
+  padding: 35px;
+  width: 300px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(255,47,109,0.4);
+  position: relative;
+  animation: bounceIn 0.6s ease;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.7); opacity:0; }
+  60% { transform: scale(1.1); opacity:1; }
+  100% { transform: scale(1); }
+}
+
+/* PIN Display */
+#pinDisplay {
+  font-size: 28px;
+  letter-spacing: 15px;
+  margin: 15px 0;
+  color: #ff2f6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: #ff2f6d;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity:1; }
+  25%, 75% { opacity:0; }
+}
+
+/* Keypad */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.key {
+  padding: 18px;
+  font-size: 20px;
+  border-radius: 50%;
+  background: #ff2f6d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255,47,109,0.4);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.key:hover {
+  transform: scale(1.2) rotate(-5deg);
+  background: #ff85a2;
+}
+
+.key.clear { background:#aaa; }
+.key.ok { background:#ffb6c1; }
+
+/* PIN Message */
+#pinMessage {
+  margin-top: 10px;
+  color: #ff2f6d;
+  font-weight: bold;
+}
+
+/* Shake + Heartbeat */
+.shake { animation: shake 0.5s; }
+@keyframes shake {
+  0%{ transform: translateX(0);}
+  25%{ transform: translateX(-5px);}
+  50%{ transform: translateX(5px);}
+  75%{ transform: translateX(-5px);}
+  100%{ transform: translateX(0);}
+}
+
+.heart-beat { animation: beat 0.6s ease; }
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+/* NAV BAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,192,203,0.9); /* romantic pink */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  font-family: 'Pacifico', cursive; /* header font */
+  box-shadow: 0 5px 15px rgba(255,47,109,0.3);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navbar h1 {
+  font-size: 22px;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.navbar ul li a:hover {
+  background: #ff85a2;
+  transform: scale(1.1);
+}
+
+/* --- LOVE REASON BOX --- */
+.love-reason-box {
+  position: relative;
+  background: rgba(255,255,255,0.9);
+  border-radius: 30px;
+  padding: 35px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 20px 40px rgba(255,47,109,0.25);
+  animation: softPop 1.2s ease forwards;
+  overflow: hidden;
+}
+
+/* title */
+/* .love-reason-box h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #ff2f6d;
+  margin-bottom: 20px;
+}
+
+/* text */
+.reason-text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ff5277;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.reason-text.delay {
+  animation-delay: 0.6s;
+} */
+
+/* floating heart */
+.heart-float {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+  font-size: 32px;
+  animation: floatHeart 3s ease-in-out infinite;
+}
+
+/* animations */
+@keyframes softPop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes floatHeart {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+/* --- HUG / KISS BOX --- */
+
+/* image display */
+.affection-display {
+  position: relative;
+  height: 330px;
+  margin-top: 30px;
+}
+
+.affection-display img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.0);
+  max-width: 200px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* hug animation */
+.show-hug {
+  animation: hugSoft 1.8s ease forwards;
+}
+
+/* kiss animation */
+.show-kiss {
+  animation: kissSoft 1.5s ease forwards;
+}
+
+/* animations */
+@keyframes hugSoft {
+  0% { opacity: 0; transform: translate(-50%, -40%) scale(0.7); }
+  50% { opacity: 1; transform: translate(-50%, -55%) scale(1.05); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes kissSoft {
+  0% { opacity: 0; transform: translate(-50%, -60%) scale(0.6); }
+  60% { opacity: 1; transform: translate(-50%, -45%) scale(1.1); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+#reasons {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #fff0f5, #ffffff);
+  text-align: center;
+}
+
+.reason-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #ff2f6d;
+  margin-bottom: 20px;
+}
+
+.reason-container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reason-card {
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #ff5277;
+  opacity: 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
